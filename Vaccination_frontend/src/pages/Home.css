@@ -1,0 +1,19 @@
+.home {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.home h1 {
+  font-size: 40px;
+}
+
+.home p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.home button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

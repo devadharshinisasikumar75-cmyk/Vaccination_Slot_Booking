@@ -1,0 +1,55 @@
+Table Admin {
+  admin_id int [pk, increment]
+  name varchar
+  email varchar
+  password varchar
+}
+
+Table User {
+  user_id int [pk, increment]
+  name varchar
+  email varchar
+  
+  phone varchar
+  password varchar
+  address varchar
+}
+
+Table Vaccination_Center {
+  center_id int [pk, increment]
+  center_name varchar
+  location varchar
+  contact_no varchar
+}
+
+Table Vaccine {
+  vaccine_id int [pk, increment]
+  vaccine_name varchar
+  manufacturer varchar
+  doses_required int
+}
+
+Table Appointment {
+  appointment_id int [pk, increment]
+  user_id int
+  center_id int
+  vaccine_id int
+  appointment_date date
+  appointment_time time
+  status varchar
+}
+
+Table Vaccination_Record {
+  record_id int [pk, increment]
+  user_id int
+  appointment_id int
+  dose_number int
+  vaccination_date date
+  certificate_no varchar
+}
+
+Ref: Appointment.user_id > User.user_id
+Ref: Appointment.center_id > Vaccination_Center.center_id
+Ref: Appointment.vaccine_id > Vaccine.vaccine_id
+Ref: Vaccination_Record.user_id > User.user_id
+Ref: Vaccination_Record.appointment_id > Appointment.appointment_id                         
