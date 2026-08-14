@@ -13,7 +13,6 @@ Many healthcare centers still rely on manual processes or disconnected systems t
 Develop a web-based Vaccination Slot Booking and Tracking Platform that enables patients to book vaccination appointments online, allows healthcare staff to manage schedules efficiently, and maintains a centralized record of vaccination history with appointment reminders.
 
 ## 5. Target Users
-- Admin
 - Healthcare Staff
 - Patients
 
@@ -30,7 +29,6 @@ Develop a web-based Vaccination Slot Booking and Tracking Platform that enables 
 - Appointment Management
 - Vaccination Record Tracking
 - Notification and Reminder System
-- Admin Dashboard
 - Reports
 
 ## 8. Core Entities / Database Tables
@@ -43,11 +41,6 @@ Develop a web-based Vaccination Slot Booking and Tracking Platform that enables 
 - Notifications
 
 ## 9. User Roles
-
-### Admin
-- Manage users
-- Manage vaccination centers and slots
-- View reports
 
 ### Healthcare Staff
 - Verify appointments
@@ -72,10 +65,3 @@ Develop a web-based Vaccination Slot Booking and Tracking Platform that enables 
 - Medicine delivery
 - Telemedicine consultation
 
-## 12. Technology Stack
-- Java
-- Spring Boot
-- MySQL
-- Maven
-- Git
-- GitHub

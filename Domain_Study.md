@@ -24,7 +24,7 @@ The Vaccination Slot Booking and Tracking Platform is a healthcare application t
 The proposed system provides an online platform where patients can register, book vaccination slots, receive appointment reminders, and view their vaccination history. Healthcare staff can manage slots, update vaccination status, and maintain digital records through a centralized system.
 
 ## Stakeholders
-- Admin
+
 - Healthcare Staff
 - Patients
 
@@ -38,11 +38,6 @@ The proposed system provides an online platform where patients can register, boo
 
 ## Scope
 The system focuses on online slot booking, appointment management, vaccination record tracking, and report generation for healthcare centers.
-
-## Limitations
-- Online payment is not included.
-- Home vaccination services are not included.
-- Medicine delivery is not included.
 
 ## Conclusion
 The Vaccination Slot Booking and Tracking Platform improves the efficiency of vaccination management by providing a secure, centralized, and user-friendly solution for patients and healthcare providers.
