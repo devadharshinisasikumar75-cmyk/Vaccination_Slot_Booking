@@ -1,0 +1,10 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "./mvnw -B -DskipTests package"
+
+[deploy]
+startCommand = "java -Dserver.port=$PORT -jar target/vaccination-0.0.1-SNAPSHOT.jar"
+healthcheckPath = "/"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

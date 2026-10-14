@@ -1,0 +1,818 @@
+/* =========================================
+   APPOINTMENT REQUESTS PAGE
+========================================= */
+
+.requests-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #f5f9ff 0%,
+    #f8f7ff 50%,
+    #f2fbf9 100%
+  );
+  color: #1e293b;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.requests-header {
+  height: 76px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 4px 18px rgba(30, 64, 175, 0.06);
+}
+
+.requests-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.requests-brand-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #e8edff;
+  color: #5b5ff0;
+}
+
+.requests-brand-icon svg {
+  width: 25px !important;
+  height: 25px !important;
+  max-width: 25px !important;
+  max-height: 25px !important;
+}
+
+.requests-brand h2 {
+  margin: 0;
+  color: #26376f;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.requests-brand span {
+  display: block;
+  margin-top: 2px;
+  color: #718096;
+  font-size: 11px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.requests-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 17px;
+
+  border: 1px solid #dbe5f3;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #52627a;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.requests-back-btn svg {
+  width: 17px !important;
+  height: 17px !important;
+  max-width: 17px !important;
+  max-height: 17px !important;
+}
+
+.requests-back-btn:hover {
+  background: #f5f8ff;
+  color: #4f63df;
+  border-color: #c7d5ff;
+  transform: translateX(-2px);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.requests-content {
+  width: 88%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 48px 0 60px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.requests-heading {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  margin-bottom: 32px;
+}
+
+.requests-heading-icon {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+  min-height: 58px;
+
+  max-width: 58px;
+  max-height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background: #eeeaff;
+  color: #7357df;
+}
+
+.requests-heading-icon svg {
+  width: 30px !important;
+  height: 30px !important;
+
+  min-width: 30px !important;
+  min-height: 30px !important;
+
+  max-width: 30px !important;
+  max-height: 30px !important;
+
+  display: block !important;
+}
+
+.requests-heading span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #7465d8;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.requests-heading h1 {
+  margin: 0;
+
+  color: #26376f;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.requests-heading p {
+  margin: 7px 0 0;
+
+  color: #6b7b94;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.requests-success,
+.requests-error {
+  padding: 13px 17px;
+
+  margin-bottom: 22px;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.requests-success {
+  background: #ecfdf5;
+  border: 1px solid #b7efd7;
+  color: #087f5b;
+}
+
+.requests-error {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+}
+
+
+/* =========================================
+   REQUEST LIST
+========================================= */
+
+.requests-list {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   REQUEST CARD
+========================================= */
+
+.request-card {
+  position: relative;
+
+  padding: 26px 28px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.06);
+
+  transition: 0.25s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 14px 32px rgba(30, 64, 175, 0.09);
+
+  border-color: #cfdcff;
+}
+
+
+/* =========================================
+   REQUEST TOP
+========================================= */
+
+.request-top {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 21px;
+
+  border-bottom: 1px solid #edf1f7;
+}
+
+
+/* =========================================
+   PATIENT ICON
+========================================= */
+
+.patient-icon {
+  width: 48px;
+  height: 48px;
+
+  min-width: 48px;
+  min-height: 48px;
+
+  max-width: 48px;
+  max-height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #eef4ff;
+  color: #4f7ff5;
+}
+
+.patient-icon svg {
+  width: 25px !important;
+  height: 25px !important;
+
+  min-width: 25px !important;
+  min-height: 25px !important;
+
+  max-width: 25px !important;
+  max-height: 25px !important;
+
+  display: block !important;
+}
+
+
+/* =========================================
+   PATIENT INFO
+========================================= */
+
+.patient-info {
+  flex: 1;
+}
+
+.patient-info h2 {
+  margin: 0;
+
+  color: #25345f;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.patient-info p {
+  margin: 4px 0 0;
+
+  color: #7a889d;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   PENDING
+========================================= */
+
+.pending-badge {
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: #fff7e6;
+
+  color: #b7791f;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   REQUEST DETAILS
+========================================= */
+
+.request-details {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  padding: 22px 0;
+}
+
+.detail-item {
+  padding: 14px 15px;
+
+  border-radius: 12px;
+
+  background: #f8faff;
+
+  border: 1px solid #edf1f7;
+}
+
+.detail-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #8290a6;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.detail-item strong {
+  display: block;
+
+  color: #33446f;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.request-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #edf1f7;
+}
+
+.reject-btn,
+.approve-btn {
+  min-width: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 11px 17px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.reject-btn svg,
+.approve-btn svg {
+  width: 17px !important;
+  height: 17px !important;
+
+  min-width: 17px !important;
+  min-height: 17px !important;
+
+  max-width: 17px !important;
+  max-height: 17px !important;
+
+  display: block !important;
+}
+
+
+/* Reject */
+
+.reject-btn {
+  border: 1px solid #fecdd3;
+
+  background: #fff7f8;
+
+  color: #c2415c;
+}
+
+.reject-btn:hover {
+  background: #fff0f2;
+
+  border-color: #fda4af;
+
+  transform: translateY(-1px);
+}
+
+
+/* Approve */
+
+.approve-btn {
+  border: none;
+
+  background: #10a878;
+
+  color: #ffffff;
+
+  box-shadow: 0 6px 16px rgba(16, 168, 120, 0.18);
+}
+
+.approve-btn:hover {
+  background: #078c65;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.requests-empty {
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 22px;
+
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.06);
+}
+
+
+/* Empty Icon */
+
+.empty-icon {
+  width: 65px;
+  height: 65px;
+
+  min-width: 65px;
+  min-height: 65px;
+
+  max-width: 65px;
+  max-height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 18px;
+
+  background: #eef4ff;
+
+  color: #6685e8;
+}
+
+.empty-icon svg {
+  width: 31px !important;
+  height: 31px !important;
+
+  min-width: 31px !important;
+  min-height: 31px !important;
+
+  max-width: 31px !important;
+  max-height: 31px !important;
+
+  display: block !important;
+}
+
+
+/* =========================================
+   LOADING CIRCLE
+========================================= */
+
+.requests-page .loading-circle {
+  width: 38px !important;
+  height: 38px !important;
+
+  min-width: 38px !important;
+  min-height: 38px !important;
+
+  max-width: 38px !important;
+  max-height: 38px !important;
+
+  flex-shrink: 0 !important;
+
+  margin: 0 0 17px 0 !important;
+
+  padding: 0 !important;
+
+  border: 4px solid #e7ecff !important;
+
+  border-top-color: #6578e8 !important;
+
+  border-radius: 50% !important;
+
+  box-sizing: border-box !important;
+
+  display: block !important;
+
+  animation: requestSpin 0.8s linear infinite !important;
+}
+
+@keyframes requestSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   EMPTY TEXT
+========================================= */
+
+.requests-empty h3 {
+  margin: 0;
+
+  color: #2e3d67;
+
+  font-size: 18px;
+}
+
+.requests-empty p {
+  max-width: 430px;
+
+  margin: 8px 0 20px;
+
+  color: #7a889d;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   REFRESH
+========================================= */
+
+.refresh-btn {
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #5b6fe8;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.refresh-btn:hover {
+  background: #4d60d5;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.requests-footer {
+  padding: 22px;
+
+  text-align: center;
+
+  border-top: 1px solid #e2e8f0;
+
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.requests-footer p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .requests-content {
+    width: 90%;
+  }
+
+  .request-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .requests-header {
+    padding: 0 5%;
+  }
+
+  .requests-back-btn {
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+
+  .requests-back-btn svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .requests-brand h2 {
+    font-size: 19px;
+  }
+
+  .requests-content {
+    width: 92%;
+    padding: 35px 0 45px;
+  }
+
+  .requests-heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .requests-heading-icon {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+    min-height: 50px;
+
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .requests-heading h1 {
+    font-size: 23px;
+  }
+
+  .requests-heading p {
+    font-size: 12px;
+  }
+
+  .request-card {
+    padding: 21px 18px;
+  }
+
+  .request-top {
+    align-items: flex-start;
+  }
+
+  .patient-info h2 {
+    font-size: 15px;
+  }
+
+  .pending-badge {
+    font-size: 10px;
+    padding: 6px 9px;
+  }
+
+  .request-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .request-actions {
+    flex-direction: column;
+  }
+
+  .reject-btn,
+  .approve-btn {
+    width: 100%;
+  }
+}

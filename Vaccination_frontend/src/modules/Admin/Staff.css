@@ -1,0 +1,265 @@
+.staff-page {
+  min-height: 100vh;
+  background: #f6f8ff;
+  color: #173b7a;
+}
+
+.staff-header {
+  height: 74px;
+  background: white;
+  border-bottom: 1px solid #e1e7f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 55px;
+}
+
+.staff-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #17449b;
+}
+
+.staff-header span {
+  font-size: 13px;
+  color: #6680aa;
+}
+
+.staff-header button {
+  border: none;
+  background: #edf4ff;
+  color: #17449b;
+  padding: 11px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.staff-content {
+  padding: 45px 60px;
+}
+
+.staff-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.staff-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: #e8fff5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.staff-heading h1 {
+  margin: 0 0 7px;
+  font-size: 34px;
+  color: #17449b;
+}
+
+.staff-heading p {
+  margin: 0;
+  color: #6480aa;
+}
+
+.staff-card {
+  background: white;
+  border: 1px solid #dce5f3;
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: 0 8px 30px rgba(35, 74, 130, 0.06);
+}
+
+.staff-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.staff-top h2 {
+  margin: 0 0 7px;
+  font-size: 25px;
+  color: #17449b;
+}
+
+.staff-top p {
+  margin: 0;
+  color: #6680aa;
+}
+
+.add-staff-btn {
+  border: none;
+  background: #10b981;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-staff-btn:hover {
+  background: #0f9f70;
+}
+
+.staff-form {
+  background: #f7faff;
+  border: 1px solid #dce7f6;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #254d89;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border: 1px solid #cbd8eb;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.form-group input:focus {
+  border-color: #4f91ff;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+}
+
+.save-staff-btn,
+.cancel-staff-btn {
+  border: none;
+  padding: 11px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.save-staff-btn {
+  background: #1769e0;
+  color: white;
+}
+
+.cancel-staff-btn {
+  background: #e9eef7;
+  color: #36527b;
+}
+
+.staff-table {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #dce5f3;
+  border-radius: 15px;
+}
+
+.staff-row {
+  min-width: 680px;
+  display: grid;
+  grid-template-columns: 1.3fr 1.6fr 1.4fr 1fr;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #edf1f7;
+  color: #35547f;
+  font-size: 14px;
+}
+
+.staff-row:last-child {
+  border-bottom: none;
+}
+
+.staff-title {
+  background: #f5f8fc;
+  font-weight: 700;
+  color: #294a78;
+}
+
+.staff-name {
+  font-weight: 700;
+  color: #183f7c;
+}
+
+.role-badge {
+  display: inline-block;
+  background: #edf3ff;
+  color: #285ab0;
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.active-badge {
+  display: inline-block;
+  background: #e8fff4;
+  color: #079669;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.staff-empty {
+  padding: 45px;
+  text-align: center;
+  color: #6680aa;
+}
+
+.staff-message {
+  margin: 0 0 18px;
+  color: #087443;
+  font-size: 14px;
+}
+
+.staff-error {
+  color: #c03939;
+}
+
+@media (max-width: 800px) {
+  .staff-content {
+    padding: 30px 20px;
+  }
+
+  .staff-header {
+    padding: 0 20px;
+  }
+
+  .staff-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-column: auto;
+  }
+
+  .staff-top {
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

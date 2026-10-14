@@ -1,0 +1,247 @@
+.users-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4f8ff, #f9fbff);
+  color: #183b72;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.users-header {
+  height: 72px;
+  padding: 0 55px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4ebf7;
+  box-shadow: 0 2px 10px rgba(30, 70, 120, 0.05);
+}
+
+.users-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #1769e0;
+}
+
+.users-header span {
+  font-size: 12px;
+  color: #7a8da8;
+}
+
+.users-header button {
+  border: none;
+  background: #edf5ff;
+  color: #1769e0;
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.users-header button:hover {
+  background: #dcecff;
+}
+
+/* Main */
+.users-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 30px 60px;
+}
+
+/* Heading */
+.users-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.users-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #e7f1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.users-heading h1 {
+  margin: 0 0 5px;
+  font-size: 28px;
+  color: #183b72;
+}
+
+.users-heading p {
+  margin: 0;
+  color: #71829d;
+  font-size: 14px;
+}
+
+/* Table container */
+.users-table-wrapper {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e3ebf7;
+  box-shadow: 0 8px 25px rgba(35, 76, 130, 0.08);
+}
+
+/* Table */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Fixed column widths */
+.users-table th:nth-child(1),
+.users-table td:nth-child(1) {
+  width: 12%;
+}
+
+.users-table th:nth-child(2),
+.users-table td:nth-child(2) {
+  width: 28%;
+}
+
+.users-table th:nth-child(3),
+.users-table td:nth-child(3) {
+  width: 40%;
+}
+
+.users-table th:nth-child(4),
+.users-table td:nth-child(4) {
+  width: 20%;
+}
+
+/* Header */
+.users-table thead {
+  background: #eef5ff;
+}
+
+.users-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: #35619a;
+  border-bottom: 1px solid #dce7f5;
+}
+
+/* Body */
+.users-table td {
+  padding: 17px 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #425b7d;
+  border-bottom: 1px solid #edf2f8;
+  vertical-align: middle;
+}
+
+/* ID alignment */
+.users-table th:first-child,
+.users-table td:first-child {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Name */
+.users-table td:nth-child(2) {
+  font-weight: 600;
+  color: #234c80;
+}
+
+/* Email */
+.users-table td:nth-child(3) {
+  color: #617692;
+  word-break: break-word;
+}
+
+/* Role */
+.users-table td:nth-child(4) {
+  text-align: left;
+}
+
+/* Role badge */
+.user-role {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 75px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e8f3ff;
+  color: #1769e0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Hover */
+.users-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.users-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Loading / Empty */
+.users-message {
+  background: #ffffff;
+  border: 1px solid #e3ebf7;
+  border-radius: 16px;
+  padding: 45px;
+  text-align: center;
+  color: #71829d;
+  box-shadow: 0 8px 25px rgba(35, 76, 130, 0.06);
+}
+
+/* Footer */
+.users-page footer {
+  text-align: center;
+  padding: 22px;
+  color: #8292aa;
+  font-size: 12px;
+  border-top: 1px solid #e5ecf5;
+  background: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .users-header {
+    padding: 0 20px;
+  }
+
+  .users-content {
+    padding: 30px 15px;
+  }
+
+  .users-heading h1 {
+    font-size: 23px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 13px 10px;
+    font-size: 12px;
+  }
+
+  .users-table {
+    min-width: 650px;
+  }
+
+  .users-table-wrapper {
+    overflow-x: auto;
+  }
+}

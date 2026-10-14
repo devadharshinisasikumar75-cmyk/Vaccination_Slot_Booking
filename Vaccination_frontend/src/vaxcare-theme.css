@@ -1,0 +1,575 @@
+:root {
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+  color: #29345f;
+  background: #f9f8ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --vaxcare-ink: #29345f;
+  --vaxcare-muted: #667085;
+  --vaxcare-primary: #7066dc;
+  --vaxcare-primary-dark: #5b54bd;
+  --vaxcare-border: #e6e3f5;
+  --vaxcare-surface: rgba(255, 255, 255, 0.88);
+  --vaxcare-shadow: 0 12px 34px rgba(80, 75, 140, 0.08);
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  color: var(--vaxcare-ink);
+  font-family: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(112, 102, 220, 0.35);
+  outline-offset: 2px;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) {
+  min-height: 100vh;
+  color: var(--vaxcare-ink) !important;
+  font-family: inherit !important;
+  background:
+    radial-gradient(circle at 10% 10%, #e9e1ff 0, transparent 28%),
+    radial-gradient(circle at 90% 15%, #d9f5ff 0, transparent 30%),
+    radial-gradient(circle at 80% 80%, #e1f8ef 0, transparent 28%),
+    #f9f8ff !important;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) * {
+  font-family: inherit !important;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) :is(h1, h2, h3) {
+  color: var(--vaxcare-ink) !important;
+  letter-spacing: -0.025em !important;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) h1 {
+  font-size: clamp(2rem, 3.4vw, 2.75rem) !important;
+  line-height: 1.15 !important;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem) !important;
+  line-height: 1.3 !important;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) h3 {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem) !important;
+  line-height: 1.35 !important;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) :is(p, label, td, th, li) {
+  line-height: 1.55;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) :is(
+  .appointments-section,
+  .summary-card,
+  .appointment-item,
+  .appointments-card,
+  .booking-card,
+  .profile-card,
+  .track-card,
+  .status-card,
+  .request-card,
+  .patient-card,
+  .slots-card,
+  .report-card,
+  .report-section,
+  .vaccine-item,
+  .center-card,
+  .staff-card,
+  .user-card,
+  .admin-card,
+  .healthcare-card,
+  .feature-card,
+  .step-card,
+  .login-card,
+  .register-card,
+  .forgot-password-card,
+  .role-card
+) {
+  border-color: var(--vaxcare-border);
+  box-shadow: var(--vaxcare-shadow);
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) :is(input, select, textarea) {
+  max-width: 100%;
+  border-color: #d9d5ef;
+  border-radius: 11px;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) button {
+  border-radius: 11px;
+  font-weight: 650;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) :is(
+  .login-submit,
+  .register-submit,
+  .book-btn,
+  .slots-add-btn,
+  .slots-submit-btn,
+  .add-center-btn,
+  .add-vaccine-btn,
+  .add-staff-btn,
+  .save-staff-btn,
+  .otp-verify-button
+) {
+  border-color: transparent !important;
+  background: linear-gradient(135deg, #667eea, #7c5ce5, #38bdf8) !important;
+  color: #fff !important;
+}
+
+:is(
+  .login-page,
+  .register-page,
+  .forgot-password-page,
+  .role-page,
+  .tracking-page,
+  .booking-page,
+  .user-dashboard,
+  .healthcare-dashboard,
+  .admin-dashboard,
+  .book-slot-page,
+  .appointments-page,
+  .track-page,
+  .vaccination-status-page,
+  .profile-page,
+  .requests-page,
+  .patients-page,
+  .healthcare-reports-page,
+  .manage-slots-page,
+  .centers-page,
+  .admin-module-page,
+  .reports-page,
+  .staff-page,
+  .vaccines-page,
+  .users-page
+) button:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  :is(
+    .login-page,
+    .register-page,
+    .forgot-password-page,
+    .role-page,
+    .tracking-page,
+    .booking-page,
+    .user-dashboard,
+    .healthcare-dashboard,
+    .admin-dashboard,
+    .book-slot-page,
+    .appointments-page,
+    .track-page,
+    .vaccination-status-page,
+    .profile-page,
+    .requests-page,
+    .patients-page,
+    .healthcare-reports-page,
+    .manage-slots-page,
+    .centers-page,
+    .admin-module-page,
+    .reports-page,
+    .staff-page,
+    .vaccines-page,
+    .users-page
+  ) {
+    width: 100%;
+    min-height: 100svh;
+    overflow-x: clip !important;
+    font-size: 15px;
+  }
+
+  :is(
+    .login-page,
+    .register-page,
+    .forgot-password-page,
+    .role-page,
+    .tracking-page,
+    .booking-page,
+    .user-dashboard,
+    .healthcare-dashboard,
+    .admin-dashboard,
+    .book-slot-page,
+    .appointments-page,
+    .track-page,
+    .vaccination-status-page,
+    .profile-page,
+    .requests-page,
+    .patients-page,
+    .healthcare-reports-page,
+    .manage-slots-page,
+    .centers-page,
+    .admin-module-page,
+    .reports-page,
+    .staff-page,
+    .vaccines-page,
+    .users-page
+  ) :is(input, select, textarea) {
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  :is(
+    .login-page,
+    .register-page,
+    .forgot-password-page,
+    .role-page,
+    .tracking-page,
+    .booking-page,
+    .user-dashboard,
+    .healthcare-dashboard,
+    .admin-dashboard,
+    .book-slot-page,
+    .appointments-page,
+    .track-page,
+    .vaccination-status-page,
+    .profile-page,
+    .requests-page,
+    .patients-page,
+    .healthcare-reports-page,
+    .manage-slots-page,
+    .centers-page,
+    .admin-module-page,
+    .reports-page,
+    .staff-page,
+    .vaccines-page,
+    .users-page
+  ) table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

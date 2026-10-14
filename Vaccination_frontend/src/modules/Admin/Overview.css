@@ -1,0 +1,161 @@
+.admin-module-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f9ff, #faf8ff);
+  font-family: "Poppins", sans-serif;
+  color: #1e293b;
+}
+
+.admin-module-header {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-module-header h2 {
+  margin: 0;
+  color: #1e3a8a;
+}
+
+.admin-module-header span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.admin-module-header button {
+  border: none;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-module-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 0;
+}
+
+.module-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.module-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  background: #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.module-heading h1 {
+  margin: 0;
+  color: #1e3a8a;
+  font-size: 30px;
+}
+
+.module-heading p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.overview-card {
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.overview-card span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.overview-card strong {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 32px;
+  color: #1e293b;
+}
+
+.overview-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.blue {
+  border-top: 4px solid #60a5fa;
+}
+
+.purple {
+  border-top: 4px solid #a78bfa;
+}
+
+.green {
+  border-top: 4px solid #34d399;
+}
+
+.orange {
+  border-top: 4px solid #fb923c;
+}
+
+.overview-info {
+  margin-top: 25px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+}
+
+.overview-info h2 {
+  margin: 0 0 8px;
+  color: #1e3a8a;
+  font-size: 20px;
+}
+
+.overview-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-module-content {
+    width: 92%;
+  }
+
+  .module-heading h1 {
+    font-size: 24px;
+  }
+}

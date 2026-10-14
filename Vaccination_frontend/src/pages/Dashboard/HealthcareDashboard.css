@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+}
+
+.healthcare-dashboard {
+  min-height: 100vh;
+  background: #f7f9ff;
+  color: #183153;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* HEADER */
+
+.healthcare-header {
+  height: 82px;
+  padding: 0 6%;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e7ebf5;
+}
+
+.healthcare-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 13px;
+  background: #dfeaff;
+  color: #3974df;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.healthcare-brand h2 {
+  margin: 0;
+  color: #193a78;
+  font-size: 21px;
+}
+
+.healthcare-brand span {
+  display: block;
+  margin-top: 3px;
+  color: #8190aa;
+  font-size: 12px;
+}
+
+.logout-button {
+  padding: 10px 19px;
+
+  border: 1px solid #d5dded;
+  border-radius: 10px;
+
+  background: white;
+  color: #315bb2;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #eef4ff;
+}
+
+
+/* MAIN */
+
+.healthcare-main {
+  width: 100%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+  padding: 42px;
+}
+
+.healthcare-welcome {
+  margin-bottom: 30px;
+}
+
+.healthcare-welcome h1 {
+  margin: 0 0 8px;
+
+  color: #18366f;
+  font-size: 32px;
+}
+
+.healthcare-welcome p {
+  margin: 0;
+
+  color: #71829f;
+  font-size: 15px;
+}
+
+
+/* GRID */
+
+.healthcare-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+
+/* CARD */
+
+.healthcare-card {
+  min-height: 355px;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  border: 1px solid rgba(120, 140, 180, 0.14);
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 30px rgba(54, 79, 125, 0.07);
+
+  transition: 0.2s ease;
+}
+
+.healthcare-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 16px 35px rgba(54, 79, 125, 0.12);
+}
+
+
+/* CARD COLORS */
+
+.blue-card {
+  background: linear-gradient(145deg, #eef6ff, #e4efff);
+}
+
+.purple-card {
+  background: linear-gradient(145deg, #f7f0ff, #eee7ff);
+}
+
+.pink-card {
+  background: linear-gradient(145deg, #fff3f8, #ffeef5);
+}
+
+.orange-card {
+  background: linear-gradient(145deg, #fff8ed, #fff0dc);
+}
+
+.cyan-card {
+  background: linear-gradient(145deg, #effcff, #e2f8fb);
+}
+
+
+/* ICON */
+
+.card-icon {
+  width: 64px;
+  height: 64px;
+
+  min-width: 64px;
+  min-height: 64px;
+
+  max-width: 64px;
+  max-height: 64px;
+
+  flex-shrink: 0;
+
+  border-radius: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  overflow: hidden;
+}
+
+.card-icon span {
+  display: flex;
+
+  width: auto;
+  height: auto;
+
+  font-size: 30px;
+  line-height: 1;
+
+  transform: none !important;
+}
+
+
+/* ICON COLORS */
+
+.blue-card .card-icon {
+  background: #d8e8ff;
+  color: #4d7fe4;
+}
+
+.purple-card .card-icon {
+  background: #e2d6ff;
+  color: #7651d8;
+}
+
+.pink-card .card-icon {
+  background: #ffd9e7;
+  color: #dc5d88;
+}
+
+.orange-card .card-icon {
+  background: #ffe4bf;
+  color: #dd8a23;
+}
+
+.cyan-card .card-icon {
+  background: #d2f3f7;
+  color: #279ab0;
+}
+
+
+/* APPOINTMENT REQUEST ICON */
+
+.request-icon {
+  font-size: 28px !important;
+  line-height: 28px !important;
+
+  width: 30px !important;
+  height: 30px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+/* TEXT */
+
+.card-category {
+  color: #69809f;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  margin-bottom: 13px;
+}
+
+.healthcare-card h2 {
+  margin: 0 0 11px;
+
+  color: #19365f;
+
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.healthcare-card p {
+  margin: 0;
+
+  max-width: 340px;
+
+  color: #7084a3;
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* BUTTON */
+
+.healthcare-card button {
+  align-self: flex-start;
+
+  margin-top: auto;
+
+  padding: 11px 18px;
+
+  border: 1px solid currentColor;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.healthcare-card button span {
+  font-size: 20px;
+  line-height: 12px;
+}
+
+
+/* BUTTON COLORS */
+
+.blue-card button {
+  color: #3975df;
+}
+
+.purple-card button {
+  color: #7750d7;
+}
+
+.pink-card button {
+  color: #dd5b87;
+}
+
+.orange-card button {
+  color: #dc8a22;
+}
+
+.cyan-card button {
+  color: #269bb2;
+}
+
+.healthcare-card button:hover {
+  background: #ffffff;
+}
+
+
+/* FOOTER */
+
+.healthcare-footer {
+  text-align: center;
+
+  padding: 22px;
+
+  color: #8a98ae;
+
+  font-size: 12px;
+
+  border-top: 1px solid #e7ebf5;
+
+  background: #ffffff;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .healthcare-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .healthcare-main {
+    padding: 30px 20px 45px;
+  }
+
+  .healthcare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .healthcare-header {
+    padding: 0 20px;
+  }
+
+  .healthcare-welcome h1 {
+    font-size: 27px;
+  }
+}

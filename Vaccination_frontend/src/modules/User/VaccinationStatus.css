@@ -1,0 +1,327 @@
+.vaccination-status-page {
+  min-height: 100vh;
+  background: #f5f8ff;
+  color: #173f8f;
+}
+
+.vaccination-status-header {
+  height: 78px;
+  padding: 0 7%;
+  background: #ffffff;
+  border-bottom: 1px solid #dce6f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vaccination-status-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vaccination-status-brand-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #e8f0ff;
+  color: #2864dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vaccination-status-brand h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #164596;
+}
+
+.vaccination-status-brand span {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: #7185aa;
+}
+
+.vaccination-status-back {
+  border: none;
+  background: #eef4ff;
+  color: #2864dc;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vaccination-status-back:hover {
+  background: #dfeaff;
+}
+
+.vaccination-status-content {
+  width: 86%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 0 40px;
+}
+
+.vaccination-status-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.vaccination-status-heading-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: #e7f0ff;
+  color: #2864dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vaccination-status-heading h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #174897;
+}
+
+.vaccination-status-heading p {
+  margin: 7px 0 0;
+  color: #7185aa;
+  font-size: 16px;
+}
+
+.vaccination-status-card {
+  background: #ffffff;
+  border: 1px solid #dce6f7;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 12px 35px rgba(36, 83, 150, 0.08);
+}
+
+.vaccination-message {
+  text-align: center;
+  padding: 70px 20px;
+  color: #7185aa;
+  font-size: 16px;
+}
+
+.vaccination-empty {
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.vaccination-empty-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #eef4ff;
+  color: #2864dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vaccination-empty h3 {
+  margin: 0 0 10px;
+  color: #174897;
+  font-size: 24px;
+}
+
+.vaccination-empty p {
+  max-width: 520px;
+  margin: 0 auto 25px;
+  color: #7185aa;
+  line-height: 1.6;
+}
+
+.vaccination-empty button {
+  border: none;
+  background: #2864dc;
+  color: #ffffff;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vaccination-status-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 18px;
+  background: #f6f9ff;
+  border: 1px solid #e1e9f8;
+  margin-bottom: 30px;
+}
+
+.vaccination-status-icon {
+  width: 66px;
+  height: 66px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f0ff;
+  color: #2864dc;
+}
+
+.vaccination-status-icon.confirmed {
+  background: #e2f8ef;
+  color: #079669;
+}
+
+.vaccination-status-icon.completed {
+  background: #ede5ff;
+  color: #7040e8;
+}
+
+.vaccination-status-icon.cancelled {
+  background: #ffe7e7;
+  color: #d64545;
+}
+
+.vaccination-status-icon.pending {
+  background: #fff2dc;
+  color: #d98a18;
+}
+
+.vaccination-status-text span {
+  display: block;
+  color: #7185aa;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.vaccination-status-text h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #2864dc;
+}
+
+.vaccination-status-text h2.confirmed {
+  color: #079669;
+}
+
+.vaccination-status-text h2.completed {
+  color: #7040e8;
+}
+
+.vaccination-status-text h2.cancelled {
+  color: #d64545;
+}
+
+.vaccination-status-text h2.pending {
+  color: #d98a18;
+}
+
+.vaccination-status-text p {
+  margin: 6px 0 0;
+  color: #7185aa;
+  line-height: 1.5;
+}
+
+.vaccination-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.vaccination-info-item {
+  padding: 20px;
+  border: 1px solid #e0e8f6;
+  border-radius: 15px;
+  background: #fbfcff;
+}
+
+.vaccination-info-item span {
+  display: block;
+  font-size: 13px;
+  color: #7b8dab;
+  margin-bottom: 7px;
+}
+
+.vaccination-info-item strong {
+  color: #174897;
+  font-size: 16px;
+}
+
+.vaccination-status-note {
+  margin-top: 25px;
+  padding: 18px 20px;
+  border-radius: 15px;
+  background: #eef5ff;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.vaccination-note-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #2864dc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.vaccination-status-note strong {
+  color: #174897;
+}
+
+.vaccination-status-note p {
+  margin: 5px 0 0;
+  color: #7185aa;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.vaccination-status-footer {
+  text-align: center;
+  padding: 25px;
+  color: #8a9bb8;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .vaccination-status-header {
+    padding: 0 20px;
+  }
+
+  .vaccination-status-back {
+    padding: 9px 12px;
+  }
+
+  .vaccination-status-content {
+    width: 92%;
+    padding-top: 35px;
+  }
+
+  .vaccination-status-heading h1 {
+    font-size: 28px;
+  }
+
+  .vaccination-status-heading p {
+    font-size: 14px;
+  }
+
+  .vaccination-status-card {
+    padding: 20px;
+  }
+
+  .vaccination-info {
+    grid-template-columns: 1fr;
+  }
+}
