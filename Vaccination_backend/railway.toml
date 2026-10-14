@@ -1,6 +1,6 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "./mvnw -B -DskipTests package"
+buildCommand = "sh ./mvnw -B -DskipTests package"
 
 [deploy]
 startCommand = "java -Dserver.port=$PORT -jar target/vaccination-0.0.1-SNAPSHOT.jar"
