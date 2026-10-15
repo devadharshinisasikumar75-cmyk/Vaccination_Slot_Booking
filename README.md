@@ -99,8 +99,11 @@ the admin portal; only staff created this way can use the staff portal.
 7. To create the first administrator, set `ADMIN_BOOTSTRAP_EMAIL` and
    `ADMIN_BOOTSTRAP_PASSWORD` in the backend `.env`. Use a password of at least
    12 characters. Restart the backend once; the bootstrap creates an admin
-   only if the database does not already contain one. Remove both bootstrap
-   values from `.env` after successful creation, then open `/admin/login`.
+   only if the database does not already contain one. If that email already
+   belongs to an administrator, the bootstrap updates that account's password.
+   Remove both bootstrap values from `.env` after successful creation or
+   password reset, then open `/admin/login`. If a different administrator
+   already exists, the bootstrap does not create another one.
 8. Sign in as admin and add the organization's actual vaccine and center
    catalog entries. Healthcare staff accounts are assigned from the admin
    portal. Staff can then sign in at `/staff/login`, open **Manage Slots**,

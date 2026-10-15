@@ -5,6 +5,8 @@ import java.util.Locale;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import vaccination.model.User;
@@ -13,6 +15,8 @@ import vaccination.service.PasswordService;
 
 @Component
 public class AdminAccountBootstrap implements ApplicationRunner {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AdminAccountBootstrap.class);
+
     private final UserRepository userRepository;
     private final PasswordService passwordService;
     private final String bootstrapEmail;
@@ -40,17 +44,29 @@ public class AdminAccountBootstrap implements ApplicationRunner {
             throw new IllegalStateException(
                     "Admin bootstrap requires both email and a password of at least 12 characters.");
         }
-        if (!userRepository.findAllByRoleIgnoreCase("ADMIN").isEmpty()) {
-            return;
-        }
 
         String email = bootstrapEmail.trim().toLowerCase(Locale.ROOT);
         if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
             throw new IllegalStateException("Admin bootstrap email is invalid.");
         }
-        if (userRepository.findByEmail(email) != null) {
+        User existingUser = userRepository.findByEmail(email);
+        if (existingUser != null && !"ADMIN".equalsIgnoreCase(existingUser.getRole())) {
             throw new IllegalStateException(
                     "Admin bootstrap email already belongs to a non-admin account.");
+        }
+
+        if (existingUser != null) {
+            if (!passwordService.matches(bootstrapPassword, existingUser.getPassword())) {
+                existingUser.setPassword(passwordService.encode(bootstrapPassword));
+                userRepository.save(existingUser);
+            }
+            return;
+        }
+
+        if (!userRepository.findAllByRoleIgnoreCase("ADMIN").isEmpty()) {
+            LOGGER.warn(
+                    "Admin bootstrap was skipped because an admin already exists with a different email.");
+            return;
         }
 
         User admin = new User(
