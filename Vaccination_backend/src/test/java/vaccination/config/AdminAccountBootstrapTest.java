@@ -48,10 +48,31 @@ class AdminAccountBootstrapTest {
     }
 
     @Test
-    void doesNotCreateAnAdditionalAdminWhenConfiguredEmailDoesNotMatch() {
+    void updatesTheOnlyExistingAdminToConfiguredCredentials() {
+        User existingAdmin = new User(
+                "Existing Admin",
+                "other@example.test",
+                passwordService.encode("previous-secure-password"),
+                "ADMIN");
         Mockito.when(userRepository.findByEmail("admin@example.test")).thenReturn(null);
         Mockito.when(userRepository.findAllByRoleIgnoreCase("ADMIN"))
-                .thenReturn(List.of(new User("Existing Admin", "other@example.test", "hash", "ADMIN")));
+                .thenReturn(List.of(existingAdmin));
+
+        bootstrap("admin@example.test", "new-secure-password").run(null);
+
+        assertEquals("admin@example.test", existingAdmin.getEmail());
+        assertTrue(passwordService.matches(
+                "new-secure-password", existingAdmin.getPassword()));
+        Mockito.verify(userRepository).save(existingAdmin);
+    }
+
+    @Test
+    void doesNotModifyMultipleAdminsWhenConfiguredEmailDoesNotMatch() {
+        User firstAdmin = new User("First Admin", "first@example.test", "hash", "ADMIN");
+        User secondAdmin = new User("Second Admin", "second@example.test", "hash", "ADMIN");
+        Mockito.when(userRepository.findByEmail("admin@example.test")).thenReturn(null);
+        Mockito.when(userRepository.findAllByRoleIgnoreCase("ADMIN"))
+                .thenReturn(List.of(firstAdmin, secondAdmin));
 
         bootstrap("admin@example.test", "new-secure-password").run(null);
 

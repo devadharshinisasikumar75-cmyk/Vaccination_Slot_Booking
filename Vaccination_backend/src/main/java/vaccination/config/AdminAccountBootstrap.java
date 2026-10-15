@@ -63,9 +63,18 @@ public class AdminAccountBootstrap implements ApplicationRunner {
             return;
         }
 
-        if (!userRepository.findAllByRoleIgnoreCase("ADMIN").isEmpty()) {
+        var existingAdmins = userRepository.findAllByRoleIgnoreCase("ADMIN");
+        if (existingAdmins.size() == 1) {
+            User existingAdmin = existingAdmins.get(0);
+            existingAdmin.setEmail(email);
+            existingAdmin.setPassword(passwordService.encode(bootstrapPassword));
+            userRepository.save(existingAdmin);
+            LOGGER.info("Updated the existing admin account from configured bootstrap credentials.");
+            return;
+        }
+        if (!existingAdmins.isEmpty()) {
             LOGGER.warn(
-                    "Admin bootstrap was skipped because an admin already exists with a different email.");
+                    "Admin bootstrap was skipped because multiple admins exist and the configured email does not match one.");
             return;
         }
 

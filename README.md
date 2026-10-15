@@ -101,9 +101,11 @@ the admin portal; only staff created this way can use the staff portal.
    12 characters. Restart the backend once; the bootstrap creates an admin
    only if the database does not already contain one. If that email already
    belongs to an administrator, the bootstrap updates that account's password.
-   Remove both bootstrap values from `.env` after successful creation or
-   password reset, then open `/admin/login`. If a different administrator
-   already exists, the bootstrap does not create another one.
+   If the database has exactly one administrator with a different email, the
+   bootstrap updates that account to the configured email and password. Remove
+   both bootstrap values from `.env` after successful creation or reset, then
+   open `/admin/login`. If multiple administrators already exist, the bootstrap
+   does not change them.
 8. Sign in as admin and add the organization's actual vaccine and center
    catalog entries. Healthcare staff accounts are assigned from the admin
    portal. Staff can then sign in at `/staff/login`, open **Manage Slots**,
